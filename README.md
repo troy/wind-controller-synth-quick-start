@@ -134,9 +134,9 @@ live_loop :pitch_bend do
 end
 ```
 
-Try [other synths](https://github.com/samaaron/sonic-pi/blob/master/etc/doc/cheatsheets/synths.md) and samples.
+Try other [synths](https://github.com/samaaron/sonic-pi/blob/master/etc/doc/cheatsheets/synths.md) and [samples](https://github.com/samaaron/sonic-pi/blob/master/etc/doc/cheatsheets/samples.md).
 
-**Multiple MIDI devices?**: In the `sync` path of `/midi/USB_MIDI_Cable/<X>/<Y>/<event>`, `X` is the order in which the USB MIDI device was plugged in ([more](https://sonic-pi.net/tutorial.html#section-11-1))). `Y` is the MIDI channel. To read CC messages from MIDI channel 1 only, use `sync "/midi/USB_MIDI_Cable/*/1/control_change"`
+**Multiple MIDI devices?**: In the `sync` path of `/midi/*/<X>/<Y>/<event>`, `X` is the order in which the device was plugged in and `Y` is the MIDI channel ([more](https://sonic-pi.net/tutorial.html#section-11-1))). To read CC messages from only MIDI channel 1, use `sync "/midi/*/*/1/control_change"`
 
 ### Explore
 
