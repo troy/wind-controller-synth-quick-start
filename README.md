@@ -113,7 +113,6 @@ set :pitch_bend, 0.0
 
 live_loop :notes do
   note, velocity = sync "/midi/*/*/*/note_on"
-  #midi_all_notes_off
   if velocity > 0
     control defaults, note: note, amp: velocity / 127.0
     # add more "control", "sample", or "play" calls here
