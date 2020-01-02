@@ -1,8 +1,11 @@
-Considering buying or just bought a wind controller (AKA electronic wind instrument)? Here's how to get it working well with popular software synthesizers and MIDI-enabled apps – in less than 10 minutes per app. Get to a great starting point quickly.
+# What is this?
+
+Considering buying or just bought a wind controller (AKA wind synth or electronic wind instrument)? Here's how to get it working well with popular software synthesizers and MIDI-enabled apps – in less than 10 minutes per app. Get to a great starting point quickly.
+
 
 # Additions and corrections
 
-… are encouraged! Do you have a software product working well with a wind controller? Email or submit a 5-minute setup, ideally with a screenshot or two.
+… are encouraged! Have a software product working well with a wind controller? Email or submit a 5-minute setup, ideally with a screenshot or two.
 
 
 # Which MIDI messages does my wind controller transmit?
@@ -28,7 +31,7 @@ Other than pitch (chosen by fingering), these are most relevant:
 * [Vibrato](https://en.wikipedia.org/wiki/Vibrato) intensity and/or rate
 
 
-# Logic
+# Logic Pro X
 
 ## Studio Horns and Studio Strings
 
@@ -87,14 +90,13 @@ These tips work with all or nearly all situations.
 
 ![Screenshot: Logic Step Editor](assets/logic/step-editor.png)
 
-**Change articulation in realtime**: Make the most of your controller. Any MIDI CC (or range of values) can change the articulation. For example, physically elevating the Sylphyo changes CC 75. That could change the articulation to trill.
-Trigger types: https://www.vsl.co.at/community/posts/m135734-Key-Switching-Articulations-in-Logic--smartest-way#post135734. "Momentary (Retrigger)" is generally what people expect. Open the effect settings to see the selected articulation change in realtime.
+**Change articulation in realtime**: Make the most of your controller. Any MIDI CC (or range of values) can change the articulation. For example, physically elevating the Sylphyo changes CC#75. CC#75 could change the articulation to trill. Different articulations can also be triggered by ranges of breath intensity values, like trilling at over 95% intensity.
 
-Different articulations can also be triggered by ranges of breath intensity values, like trilling at over 95% intensity. To do that, in the Track options, look for "Articulation Set" and create a new set, then map certain CC#s or value ranges to articulations:
+To define articulation triggers, in the Track options, look for "Articulation Set" and create a new set. Edit the set and map certain CC#s or value ranges to articulations, as shown below. When choosing a trigger type, "Momentary (Retrigger)" is generally what people expect ([more] https://www.vsl.co.at/community/posts/m135734-Key-Switching-Articulations-in-Logic--smartest-way#post135734)). When testing settings, open the effect's settings screen; the last used articulation will change in realtime.
 
-![Screenshot: Create a new Articulation Set](articulation-set-new.png)
+![Screenshot: Create a new Articulation Set](assets/logic/articulation-set-new.png)
 
-![Screenshot: Define articulation switches based on MIDI values](articulation-set-switches.png)
+![Screenshot: Define articulation switches based on MIDI values](assets/logic/articulation-set-switches.png)
 
 
 # Sonic Pi (free)
@@ -135,13 +137,13 @@ end
 
 Try [other synths](https://github.com/samaaron/sonic-pi/blob/master/etc/doc/cheatsheets/synths.md) and samples.
 
-**Multiple MIDI devices?**: In the `sync` path of `/midi/USB_MIDI_Cable/<X>/<Y>/<event>`, `X` is the order in which the USB MIDI device was plugged in ([more]([basic script](https://sonic-pi.net/tutorial.html#section-11-1))). `Y` is the MIDI channel. To read CC messages from MIDI channel 1 only, use `sync "/midi/USB_MIDI_Cable/*/1/control_change"`
+**Multiple MIDI devices?**: In the `sync` path of `/midi/USB_MIDI_Cable/<X>/<Y>/<event>`, `X` is the order in which the USB MIDI device was plugged in ([more](https://sonic-pi.net/tutorial.html#section-11-1))). `Y` is the MIDI channel. To read CC messages from MIDI channel 1 only, use `sync "/midi/USB_MIDI_Cable/*/1/control_change"`
 
 ### Explore
 
-**Advanced controls**: MIDI CC values can be mapped to [different arguments to "control," "sample," or "play"](https://sonic-pi.net/tutorial.html#section-2-4). Note that some Sonic Pi synths and arguments [can't be changed](https://sonic-pi.net/tutorial.html#section-A-10) after a sound is triggered, though most can. In the example above, a [variable](https://sonic-pi.net/tutorial.html#section-5-6) is used to make the most recent pitch bend value accessible within the breath intensity loop.
+**Advanced controls**: MIDI CC values can be mapped to [different arguments to "control," "sample," or "play."](https://sonic-pi.net/tutorial.html#section-2-4) Note that some Sonic Pi synths and arguments [can't be changed](https://sonic-pi.net/tutorial.html#section-A-10) after a sound is triggered, though most can. In the example above, a [variable](https://sonic-pi.net/tutorial.html#section-5-6) is `set` to make the most recent pitch bend value accessible from the breath intensity loop.
 
-**Pitch bend**: In the example above, the pitch bend value linearly changes the Hoover synth's resonance (`res`). It can map to any parameter, though, and can be adjusted to better suit the parameter's expected range. When using `sample` instead of `control`, it can actually bend the note using `rpitch` or `rate` ([more](https://github.com/samaaron/sonic-pi/blob/master/etc/doc/tutorial/A.17-sample-stretching.md)). Some mediocre examples for illustrative purposes:
+**Pitch bend**: In the example above, the pitch bend value linearly changes the Hoover synth's resonance (`res`). It can map to any parameter, though, and can be adjusted to better suit the parameter's expected range. When using `sample` instead of `control`, it can actually bend the note using `rpitch` or `rate` ([more](https://github.com/samaaron/sonic-pi/blob/master/etc/doc/tutorial/A.17-sample-stretching.md)). Mediocre examples:
 
 ```
 sample :ambi_choir, rate: 0.25, sustain: velocity/30.0
