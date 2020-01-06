@@ -92,7 +92,7 @@ These tips work with all or nearly all situations.
 
 **Change articulation in realtime**: Make the most of your controller. Any MIDI CC (or range of values) can change the articulation. For example, physically elevating the Sylphyo changes CC#75. CC#75 could change the articulation to trill. Different articulations can also be triggered by ranges of breath intensity values, like trilling at over 95% intensity.
 
-To define articulation triggers, in the Track options, look for "Articulation Set" and create a new set. Edit the set and map certain CC#s or value ranges to articulations, as shown below. When choosing a trigger type, "Momentary (Retrigger)" is generally what people expect ([more] https://www.vsl.co.at/community/posts/m135734-Key-Switching-Articulations-in-Logic--smartest-way#post135734)). When testing settings, open the effect's settings screen; the last used articulation will change in realtime.
+To define articulation triggers, in the Track options, look for "Articulation Set" and create a new set. Edit the set and map certain CC#s or value ranges to articulations, as shown below. When choosing a trigger type, "Momentary (Retrigger)" is generally what people expect ([more](https://www.vsl.co.at/community/posts/m135734-Key-Switching-Articulations-in-Logic--smartest-way#post135734)). When testing settings, open the effect's settings screen; the "Last Played Articulation" will change in realtime when a threshold triggers.
 
 ![Screenshot: Create a new Articulation Set](assets/logic/articulation-set-new.png)
 
