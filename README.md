@@ -81,6 +81,12 @@ Pending. Contributions welcome!
 
 Pending. Contributions welcome!
 
+Notes:
+
+* Mapping breath: click "Ctrl A Ctrl B" in the lower left corner, then change "MIDI Controller Assign" for "Ctrl B" to either "2 Breath" or "11 Exp" (depending on your controller). To make Ctrl B do something, in the "Contrller B" section to the left of the Morph pane, click the number "1" to activate the first output from Controller B, then click the Target dropdown and choose one. Filter Cutoff and Obj1 Strength are reasonable starting points.
+* "Keyboard Mode" (upper right corner) has a significant effect on sound. For a melody, "Mono" or "Legato" are probably better starting points. For sound design ongoing drone sounds, "Poly" may be a better starting point. "Mono" is easiest for testing. "[Excite type](https://support.apple.com/kb/PH27003?locale=en_US&viewlocale=en_US)" also has a major effect (try "Bow").
+* Difficulty: 7/10. Try this after using any of the other Logic instruments, which are significantly simpler.
+
 
 ## Logic tips
 
