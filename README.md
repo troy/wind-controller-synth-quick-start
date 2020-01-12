@@ -51,6 +51,8 @@ Note: Studio Horns and Studio Strings are distinct from EXS24. EXS also provides
 
 **Tinker**: Here's what the [basic settings](https://support.apple.com/kb/PH27391?locale=en_US) and the [extended parameters](https://help.apple.com/logicpro/mac/10.4/#/lgcp19d099e1) do. The knobs do still affect the sound, even with "Dynamics via CC" enabled. Auto Vibrato, Humanize, and Key Clicks are most relevant. Because breath intensity controls Attack, Release, and Volume, overriding them with unusual values rarely makes sense.
 
+**Articulate**: Articulations make these instruments shine. A cello crescendo or spiccato sounds completely different than standard "Sustain" play. See [Logic tips](#logic-tips) "Change articulation in realtime."
+
 Related: a player's [experiences](https://www.logicprohelp.com/forum/viewtopic.php?t=136387); a sax player's [favorite setup](https://www.kvraudio.com/forum/viewtopic.php?p=6998183&sid=55bfda87d982dd07bf47fdaf29930acf#p6998183) (though I prefer the default Alto Sax 1 with only the minimal changes above); see [Logic Tips](#logic-tips)
 
 
@@ -103,6 +105,8 @@ To define articulation triggers, in the Track options, look for "Articulation Se
 ![Screenshot: Create a new Articulation Set](assets/logic/articulation-set-new.png)
 
 ![Screenshot: Define articulation switches based on MIDI values](assets/logic/articulation-set-switches.png)
+
+Alternatively, if you have a MIDI keyboard, playing notes in the lowest octave will trigger Logic's default [articulation keyswitches](https://help.apple.com/logicpro/mac/10.4/#/lgcpa041b9bd).
 
 
 # Sonic Pi (free)
