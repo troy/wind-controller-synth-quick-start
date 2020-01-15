@@ -178,6 +178,11 @@ A [user](https://www.kvraudio.com/forum/viewtopic.php?p=4908062#p4908062) recomm
 Go deeper: [Patches](https://u-he.com/PatchLib/zebra.html#zlette)
 
 
+# Zeeon (iOS)
+
+Here's a [demo video](https://www.youtube.com/watch?v=9x0XyIVIDQM) showing how to use [Zeeon](http://www.beepstreet.com/ios/zeeon), an analog modeling synth. Basically, use Zeeon's MIDI Learn to bind CC#2 or CC#11 to Filter Cutoff. As the video shows, the Filter Cutoff knob will turn in realtime as your breath intensity changes.
+
+
 # VCV Rack (free)
 
 Pending. Contributions welcome!
