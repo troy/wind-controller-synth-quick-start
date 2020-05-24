@@ -11,7 +11,7 @@ Considering buying or just bought a wind controller (AKA wind synth or electroni
 # Which MIDI messages does my wind controller transmit?
 
 * [Akai EWI5000](https://www.akaipro.com/amfile/file/download/file/656/product/43/): Breath (**varies**), Pitch-bend plate (varies), and 2 more
-* [Aodyo Sylpho](https://www.aodyo.com/user-manual-page-en-21.html#section-getting-started.default-mappings): Breath (as **CC#11**), key-bend (as Pitch Bend or CC#78), and 6 more
+* [Aodyo Sylphyo](https://www.aodyo.com/user-manual-page-en-21.html#section-getting-started.default-mappings): Breath (as **CC#11**), key-bend (as Pitch Bend or CC#78), and 6 more
 * [Roland Aerophone AE-10](https://static.roland.com/assets/media/pdf/AE-10_eng03_W.pdf): Breath (as **CC#2**), Bite (as Pitch Bend)
 * [Yamaha WX5](https://usa.yamaha.com/files/download/other_assets/4/334594/WX5E.PDF): Breath (as **CC#2**), Pitch bend wheel (as Pitch Bend), and 3-4 more
 
