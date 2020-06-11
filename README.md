@@ -10,6 +10,8 @@ Considering buying or just bought a wind controller (AKA wind synth or electroni
 
 # Which MIDI messages does my wind controller transmit?
 
+Here's how physical interactions map to MIDI messages with each device's default settings:
+
 * [Akai EWI5000](https://www.akaipro.com/amfile/file/download/file/656/product/43/): Breath (**varies**), Pitch-bend plate (varies), and 2 more
 * [Aodyo Sylphyo](https://www.aodyo.com/user-manual-page-en-21.html#section-getting-started.default-mappings): Breath (as **CC#11**), key-bend (as Pitch Bend or CC#78), and 6 more
 * [Roland Aerophone AE-10](https://static.roland.com/assets/media/pdf/AE-10_eng03_W.pdf): Breath (as **CC#2**), Bite (as Pitch Bend)
@@ -21,6 +23,7 @@ The configurations in this document were tested with Aodyo Sylphyo.
 
 Related: [CC#2 (often called Breath Control) and CC#11 (often called Expression) are "functionally the same."](https://www.midi.org/forum/855-cc2-vs-cc11) Different controllers and synths chose different default Control Change (CC) message numbers for breath. As long as the instrument and the synth match, the result is identical. If a synth cannot be reconfigured (such as with some hardware synths), use the wind controller firmware to change the output CC#.
 
+**Aftertouch**: In addition, EWI, Sylphyo, and AE-10 can output MIDI aftertouch messages instead of, or in addition to, CC2 or CC11. A few synths which cannot be configured to modulate based on CC2 or CC11 can be configured to modulate based on aftertouch. Here's [an example](https://jimhanks.wordpress.com/2016/11/20/programming-ipad-synths-for-breath-control-part-1/) where breath generates MIDI aftertouch to control iSem.
 
 # Concepts
 
@@ -29,7 +32,6 @@ Other than pitch (chosen by fingering), these are most relevant:
 * Breath. Should the sound be sudden and loud or slow and quiet? These are [loudness and attack](http://filmsound.org/articles/ninecomponents/9components.htm). In a synth, breath is often used to control two or more of: volume (loudness), attack, which sample to use (for sampled instruments; AKA "Sample select"), and the cutoff frequency of a filter (AKA "Filter cutoff").
 * Pitch bend
 * [Vibrato](https://en.wikipedia.org/wiki/Vibrato) intensity and/or rate
-
 
 # Logic Pro X
 
