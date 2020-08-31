@@ -111,6 +111,11 @@ To define articulation triggers, in the Track options, look for "Articulation Se
 Alternatively, if you have a MIDI keyboard, playing notes in the lowest octave will trigger Logic's default [articulation keyswitches](https://help.apple.com/logicpro/mac/10.4/#/lgcpa041b9bd).
 
 
+# KORG iMS-20
+
+iMS-20 does not support MIDI learn, but iMS-20 and many other KORG iOS synths support [static MIDI CC to knob mappings](www.korguser.net/ims20/html/help/en/midi.html). For example, to control the low-pass filter cutoff frequency, a wind instrument should send CC#74. To see this in action, configure your wind instrument to send breath intensity as both MIDI velocity and MIDI CC#74.
+
+
 # Sonic Pi (free)
 
 [This video](https://vimeo.com/214130287) demonstrates a WX-11 controlling Sonic Pi. In general, define a `live_loop`. In the loop, read USB MIDI messages using the `sync` command and use the message values to make sounds with the `control` command.
