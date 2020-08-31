@@ -113,7 +113,7 @@ Alternatively, if you have a MIDI keyboard, playing notes in the lowest octave w
 
 # KORG iMS-20
 
-iMS-20 does not support MIDI learn, but iMS-20 and many other KORG iOS synths support [static MIDI CC to knob mappings](www.korguser.net/ims20/html/help/en/midi.html). For example, to control the low-pass filter cutoff frequency, a wind instrument should send CC#74. To see this in action, configure your wind instrument to send breath intensity as both MIDI velocity and MIDI CC#74.
+iMS-20 does not support MIDI learn, but iMS-20 and many other KORG iOS synths support [static MIDI CC to knob mappings](www.korguser.net/ims20/html/help/en/midi.html). For example, to control the low-pass filter cutoff frequency, a wind instrument should send CC#74. To see this in action, configure your wind instrument to send breath intensity as both MIDI velocity and MIDI CC#74. Use MIDI channel 1.
 
 
 # Sonic Pi (free)
