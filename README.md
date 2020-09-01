@@ -18,7 +18,7 @@ Considering buying or just bought a wind controller (AKA wind synth or electroni
 … are encouraged! Have a software product working well with a wind controller? Email or submit a 5-minute setup, ideally with a screenshot or two.
 
 
-# Wind controllers
+# Wind controller setup
 
 ## Which MIDI messages does my wind controller transmit?
 
