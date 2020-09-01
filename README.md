@@ -3,11 +3,6 @@
 Considering buying or just bought a wind controller (AKA wind synth or electronic wind instrument)? Here's how to get it working well with popular software synthesizers and MIDI-enabled apps – in less than 10 minutes per app. Get to a great starting point quickly.
 
 
-# Additions and corrections
-
-… are encouraged! Have a software product working well with a wind controller? Email or submit a 5-minute setup, ideally with a screenshot or two.
-
-
 # Contents
 
 * [Wind controller setup](#wind-controller-setup)
@@ -16,6 +11,11 @@ Considering buying or just bought a wind controller (AKA wind synth or electroni
 * [Sonic Pi (free)](#sonic-pi-free)
 * [Zebralette (free)](#zebralette-free)
 * [Zeeon](#zeeon)
+
+
+# Additions and corrections
+
+… are encouraged! Have a software product working well with a wind controller? Email or submit a 5-minute setup, ideally with a screenshot or two.
 
 
 # Wind controllers
