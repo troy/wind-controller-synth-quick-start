@@ -8,7 +8,19 @@ Considering buying or just bought a wind controller (AKA wind synth or electroni
 … are encouraged! Have a software product working well with a wind controller? Email or submit a 5-minute setup, ideally with a screenshot or two.
 
 
-# Which MIDI messages does my wind controller transmit?
+# Contents
+
+* [Wind controller setup](#wind-controller-setup)
+* [Logic Pro X](#logic-pro-x), including [Studio Horns and Studio Strings](#studio-horns-and-studio-strings), [EXS24](##exs24), [Sculpture](#sculpture), and instrument-independent [tips](#logic-tips)
+* [KORG iMS-20](#korg-ims-20)
+* [Sonic Pi (free)](#sonic-pi-free)
+* [Zebralette (free)](#zebralette-free)
+* [Zeeon](#zeeon)
+
+
+# Wind controllers
+
+## Which MIDI messages does my wind controller transmit?
 
 Here's how physical interactions map to MIDI messages with each device's default settings:
 
@@ -25,13 +37,14 @@ Related: [CC#2 (often called Breath Control) and CC#11 (often called Expression)
 
 **Aftertouch**: In addition, EWI, Sylphyo, and AE-10 can output MIDI aftertouch messages instead of, or in addition to, CC2 or CC11. A few synths which cannot be configured to modulate based on CC2 or CC11 can be configured to modulate based on aftertouch. Here's [an example](https://jimhanks.wordpress.com/2016/11/20/programming-ipad-synths-for-breath-control-part-1/) where breath generates MIDI aftertouch to control iSem.
 
-# Concepts
+## Concepts
 
 Other than pitch (chosen by fingering), these are most relevant:
 
 * Breath. Should the sound be sudden and loud or slow and quiet? These are [loudness and attack](http://filmsound.org/articles/ninecomponents/9components.htm). In a synth, breath is often used to control two or more of: volume (loudness), attack, which sample to use (for sampled instruments; AKA "Sample select"), and the cutoff frequency of a filter (AKA "Filter cutoff").
 * Pitch bend
 * [Vibrato](https://en.wikipedia.org/wiki/Vibrato) intensity and/or rate
+
 
 # Logic Pro X
 
@@ -81,15 +94,17 @@ Go deeper: https://logic-users-group.com/threads/akai-ewi-4000s-wind-controller-
 Pending. Contributions welcome!
 
 
-## Sculpture (physical modeling)
+## Sculpture
 
-Pending. Contributions welcome!
+**This section is in progress**
 
-Notes:
+The basics:
 
 * Mapping breath: click "Ctrl A Ctrl B" in the lower left corner, then change "MIDI Controller Assign" for "Ctrl B" to either "2 Breath" or "11 Exp" (depending on your controller). To make Ctrl B do something, in the "Contrller B" section to the left of the Morph pane, click the number "1" to activate the first output from Controller B, then click the Target dropdown and choose one. Filter Cutoff and Obj1 Strength are reasonable starting points.
 * "Keyboard Mode" (upper right corner) has a significant effect on sound. For a melody, "Mono" or "Legato" are probably better starting points. For sound design ongoing drone sounds, "Poly" may be a better starting point. "Mono" is easiest for testing. "[Excite type](https://support.apple.com/kb/PH27003?locale=en_US&viewlocale=en_US)" also has a major effect (try "Bow").
 * Difficulty: 7/10. Try this after using any of the other Logic instruments, which are significantly simpler.
+
+Additional contributions welcome.
 
 
 ## Logic tips
@@ -113,12 +128,12 @@ Alternatively, if you have a MIDI keyboard, playing notes in the lowest octave w
 
 # KORG iMS-20
 
-iMS-20 does not support MIDI learn, but iMS-20 and many other KORG iOS synths support [static MIDI CC to knob mappings](www.korguser.net/ims20/html/help/en/midi.html). For example, to control the low-pass filter cutoff frequency, a wind instrument should send CC#74. To see this in action, configure your wind instrument to send breath intensity as both MIDI velocity and MIDI CC#74. Use MIDI channel 1.
+[iMS-20](https://apps.apple.com/us/app/korg-ims-20/id401142966) does not support MIDI learn, but iMS-20 and many other KORG iOS synths support [static MIDI CC to knob mappings](www.korguser.net/ims20/html/help/en/midi.html). For example, to control the low-pass filter cutoff frequency, a wind instrument should send CC#74. To see this in action, configure your wind instrument to send breath intensity as both MIDI velocity and MIDI CC#74. Use MIDI channel 1.
 
 
 # Sonic Pi (free)
 
-[This video](https://vimeo.com/214130287) demonstrates a WX-11 controlling Sonic Pi. In general, define a `live_loop`. In the loop, read USB MIDI messages using the `sync` command and use the message values to make sounds with the `control` command.
+[This video](https://vimeo.com/214130287) demonstrates a WX-11 controlling [Sonic Pi](https://sonic-pi.net/). In general, define a `live_loop`. In the loop, read USB MIDI messages using the `sync` command and use the message values to make sounds with the `control` command.
 
 Here's a script which processes note on, breath intensity, and pitch bend from all MIDI devices and channels:
 
@@ -174,9 +189,9 @@ Go deeper: [Michael Brecker effect](https://vimeo.com/214204872), [rotating chor
 Pending. Contributions welcome!
 
 
-# [Zebralette](https://u-he.com/products/zebralette/) (free)
+# Zebralette (free)
 
-Zebralette is a plug-in that requires a host DAW (AU, VST, or AAX). If using Logic: install Zebralette, restart Logic, and access Zebralette through a channel strip instrument slot. Alongside EXS24, Mellotron, and other software instruments, look for "AU Instruments." In that menu, a new submenu called "u-he" should be listed.
+[Zebralette](https://u-he.com/products/zebralette/) is a plug-in that requires a host DAW (AU, VST, or AAX). If using Logic: install Zebralette, restart Logic, and access Zebralette through a channel strip instrument slot. Alongside EXS24, Mellotron, and other software instruments, look for "AU Instruments." In that menu, a new submenu called "u-he" should be listed.
 
 Supports "User-definable modulation sources" to map breath control (CC#2) and/or expression (CC#11) to most effect controls. See [User Guide](https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/manuals/plugins/zebralette/Zebralette-user-guide.pdf) under "List of Modulation Sources."
 
@@ -185,9 +200,9 @@ A [user](https://www.kvraudio.com/forum/viewtopic.php?p=4908062#p4908062) recomm
 Go deeper: [Patches](https://u-he.com/PatchLib/zebra.html#zlette)
 
 
-# Zeeon (iOS)
+# Zeeon
 
-Here's a [demo video](https://www.youtube.com/watch?v=9x0XyIVIDQM) showing how to use [Zeeon](http://www.beepstreet.com/ios/zeeon), an analog modeling synth. Basically, use Zeeon's MIDI Learn to bind CC#2 or CC#11 to Filter Cutoff. As the video shows, the Filter Cutoff knob will turn in realtime as your breath intensity changes.
+Here's a [demo video](https://www.youtube.com/watch?v=9x0XyIVIDQM) showing how to use [Zeeon](http://www.beepstreet.com/ios/zeeon), an iOS analog modeling synth. Basically, use Zeeon's MIDI Learn to bind CC#2 or CC#11 to Filter Cutoff. As the video shows, the Filter Cutoff knob will turn in realtime as your breath intensity changes.
 
 
 # VCV Rack (free)
