@@ -193,7 +193,7 @@ Pending. Contributions welcome!
 
 [Zebralette](https://u-he.com/products/zebralette/) is a plug-in that requires a host DAW (AU, VST, or AAX). If using Logic: install Zebralette, restart Logic, and access Zebralette through a channel strip instrument slot. Alongside EXS24, Mellotron, and other software instruments, look for "AU Instruments." In that menu, a new submenu called "u-he" should be listed.
 
-Supports "User-definable modulation sources" to map breath control (CC#2) and/or expression (CC#11) to most effect controls. See [User Guide](https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/manuals/plugins/zebralette/Zebralette-user-guide.pdf) under "List of Modulation Sources."
+Supports "User-definable modulation sources" to map breath control (CC#2) and/or expression (CC#11) to most effect controls. See [User Guide](https://uhe-dl.b-cdn.net/manuals/plugins/zebralette/Zebralette-user-guide.pdf) under "List of Modulation Sources."
 
 A [user](https://www.kvraudio.com/forum/viewtopic.php?p=4908062#p4908062) recommends: "Besides modulating volume, Breath Control (CC #2) in most of the patches is used to modulate oscillator spectral effects and/or waveform selection"
 
